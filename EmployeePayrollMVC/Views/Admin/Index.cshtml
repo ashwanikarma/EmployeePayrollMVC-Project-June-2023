@@ -1,0 +1,105 @@
+﻿@model IEnumerable<CommonLayer.Model.EmployeeModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="emplogo">
+<div id="col-1" style="box-sizing:border-box">
+    <img src="~/assets/images/logo.png" />
+</div>
+<div id="col-2">
+        <h5 style="color:red; margin:auto;font-weight:800;">EMPLOYEE</h5>
+        <h5 style="color:black; margin:auto; font-weight:800;">PAYROLL</h5>
+</div>
+</div>
+
+<div  class="login-index">
+    
+    <a style=" color:white; text-decoration:none; font-weight:600;" asp-controller="Admin" asp-action="Logout">Logout</a>
+</div>
+<div class="user-log">
+    <h5 style="color:midnightblue;">@ViewBag.Name</h5>
+</div>
+<p >
+    <input id="ad-empbtn" type="button" value="Add Employee Detail"  onclick="location.href='@Url.Action("AddEmployee", "Employee")'" />
+@*    <a id="ad-empbtn" asp-action="AddEmployee">Add New Employee</a>
+*@</p>
+@if (TempData["Notification"]!=null){
+    var notification = (Notification)TempData["Notification"];
+    if(notification.Type == "success")
+    {
+        <div class="notification success">
+            @notification.Message
+        </div>
+    }
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EmpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Notes)
+            </th>
+            <th>
+                Action
+            </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                    <img src="@Url.Content(item.Image)" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Notes)
+            </td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit","Employee", new {  id=item.EmpId  }) |
+                @*@Html.ActionLink("Details", "Details", new {  id=item.EmpId }) |*@
+                    @Html.ActionLink("Delete", "Delete","Employee", new {  id=item.EmpId })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

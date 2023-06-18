@@ -1,0 +1,13 @@
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.AssemblyReference.cache
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.AssemblyInfoInputs.cache
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.AssemblyInfo.cs
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.deps.json
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.CopyComplete
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\ashwa\Documents\PracticeCFP\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.pdb

@@ -1,0 +1,42 @@
+﻿@model CommonLayer.Model.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div  class="log-row">
+
+
+    <div class="log-col-md-4">
+
+        <div class="title">Login</div>
+        <form asp-action="Login">
+            <div class="user-details">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                    <label asp-for="email" class="control-label">Email Id</label>
+                    <input type="email" placeholder="enter email id"  asp-for="email" class="form-control" />
+                    <span asp-validation-for="email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="password" class="control-label">Password</label>
+                    <input type="password" placeholder="enter password" asp-for="password" class="form-control" />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                    <div class="form-group">
+                    <input style="text-align:center; width:100%;" type="submit" value="Login" class="login-btn" />
+                </div>
+                <div style="display:flex">
+                <p>Don't have an account? </p>
+                <a asp-controller="Employee" asp-action="Register">Create one here</a>
+                </div>
+                <h4 style="color:red;">@Html.ViewData["message"]</h4>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

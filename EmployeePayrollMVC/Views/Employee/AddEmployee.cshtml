@@ -1,0 +1,123 @@
+﻿@model CommonLayer.Model.EmployeeModel
+
+@{
+    ViewData["Title"] = "AddEmployee";
+}
+<div id="emplogo">
+    <div id="col-1" style="box-sizing:border-box">
+        <img src="~/assets/images/logo.png" />
+    </div>
+    <div id="col-2">
+        <h5 style="color:red; margin:auto;font-weight:800;">EMPLOYEE</h5>
+        <h5 style="color:black; margin:auto; font-weight:800;">PAYROLL</h5>
+    </div>
+
+</div>
+<h5 style="color:black; margin:auto; font-weight:700;  text-align: center; ">
+    ADD EMPLOYEE DETAIL
+</h5>
+
+@*<h1>AddEmployee</h1>
+
+<h4>EmployeeModel</h4>
+
+*@<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEmployee">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+@*            <div class="form-group">
+                <label asp-for="EmpId" class="control-label"></label>
+                <input asp-for="EmpId" class="form-control" />
+                <span asp-validation-for="EmpId" class="text-danger"></span>
+            </div>
+*@            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>*@
+             <div class="form-group">
+                <label>Profile Image</label><br>
+
+                
+                @Html.RadioButtonFor(model => model.Image, "~/assets/profile-images/Ellipse -1.png")
+                <img src="~/assets/profile-images/Ellipse -1.png" />
+                
+                @Html.RadioButtonFor(model => model.Image, "~/assets/profile-images/Ellipse -2.png")
+                <img src="~/assets/profile-images/Ellipse -2.png" />
+                
+                @Html.RadioButtonFor(model => model.Image, "~/assets/profile-images/Ellipse -3.png")
+                <img src="~/assets/profile-images/Ellipse -3.png" />
+                
+                @Html.RadioButtonFor(model => model.Image, "~/assets/profile-images/Ellipse -4.png")
+                <img src="~/assets/profile-images/Ellipse -4.png" />
+            </div>
+@*            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label>Gender</label>
+
+                @Html.RadioButtonFor(model => model.Gender, "Male")
+                Male
+
+                @Html.RadioButtonFor(model => model.Gender, "Female")
+                Female
+            </div>
+            <div class="form-group">
+                <label>Department</label>
+                @Html.DropDownListFor(model => model.Department,new SelectList(Enum.GetValues(typeof(CommonLayer.Model.Department))),
+                "Select Department")
+            </div>
+                @*            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>*@
+            @*            <div class="form-group">
+               <label>Department</label>
+            <select class="form-group" id="Department" name="Department">
+                <option selected disabled hidden>Select Department</option>
+                <option>HR</option>
+                <option>Sales</option>
+                <option>Finance</option>
+                <option>Engineer</option>
+                <option>Others</option>
+            </select>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="Notes">
+                <label asp-for="Notes" class="control-label"></label>
+                <input asp-for="Notes" class="form-control" />
+                <span asp-validation-for="Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Admin" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,93 @@
+﻿@model CommonLayer.Model.EmployeeModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div id="emplogo">
+    <div id="col-1" style="box-sizing:border-box">
+        <img src="~/assets/images/logo.png" />
+    </div>
+    <div id="col-2">
+        <h5 style="color:red; margin:auto;font-weight:800;">EMPLOYEE</h5>
+        <h5 style="color:black; margin:auto; font-weight:800;">PAYROLL</h5>
+    </div>
+
+</div>
+<h5 style="color:black; margin:auto; font-weight:700;  text-align: center; ">
+    EMPLOYEE DETAIL
+</h5>
+<div class="login-index">
+
+    <a style=" color:white; text-decoration:none; font-weight:600;" asp-controller="Admin" asp-action="Logout">Logout</a>
+</div>
+<div class="user-log">
+    <h5 style="color:midnightblue;">@ViewBag.Name</h5>
+</div>
+@if (TempData["Notification"]!=null){
+    var notification = (Notification)TempData["Notification"];
+    if(notification.Type == "success")
+    {
+        <div class="notification success">
+            @notification.Message
+        </div>
+    }
+}
+<div>
+    <hr/>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmpId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmpId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class = "col-sm-10">
+            <img src="@Url.Content(Model.Image)" />
+            @*@Html.DisplayFor(model => model.Image)*@
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+    </dl>
+</div>
+<div>
+@*    <a asp-controller="Admin" asp-action="Logout">Logout</a>
+*@@*    @Html.ActionLink("Edit", "Edit", new {  id = Model.EmpId }) |
+    <a asp-action="Index">Back to List</a>
+*@</div>

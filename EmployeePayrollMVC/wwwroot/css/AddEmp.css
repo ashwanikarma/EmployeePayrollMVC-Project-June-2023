@@ -1,0 +1,128 @@
+﻿.row {
+    display: flex;
+    padding: 20px 5px 0px 5px;
+    justify-content: center;
+    background-color: white;
+}
+body {
+    background-color:whitesmoke;
+}
+#Notes {
+    width: 100%;
+    height: 80px;
+    margin-bottom:35px;
+}
+
+th {
+    outline: auto;
+    outline-color: grey;
+    outline-width:1px;
+}
+th, td {
+    border: 0.1px solid;
+    border-color: darkslategrey;
+  
+}
+
+#emplogo {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    align-content:center;
+}
+th{
+    text-align:center;
+}
+
+#ad-empbtn {
+    background-color: #4CAF50;
+    color: white;
+    border:none;
+    padding: 10px 15px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight:600;
+    border-radius: 5px;
+}
+#ad-empbtn:hover{
+    background-color:darkgreen;
+    color:white;
+}
+
+.log-row {
+    width: 100%;
+    background-image: url(../assets/images/4321984.jpg);
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+/*    background: linear-gradient(135deg, #d8d8d8, #fff2f2 );
+*/    padding: 10px;
+}
+.log-row .log-col-md-4 {
+        max-width: 450px;
+        width: 100%;
+        background: #fff;
+        padding: 25px 30px;
+        border-radius: 5px;
+}
+    .log-row .log-col-md-4 {
+        box-shadow: 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+    }
+        .log-row .log-col-md-4 .login-btn {
+            margin-top: 10px;
+            width: 80%;
+            height:40px;
+            border-radius: 20px;
+            color:white;
+            background-color:blue;
+            font-weight: 600;
+        }
+            .log-row .log-col-md-4 .login-btn:hover{
+                background-color: #9a00ff;
+            }
+            .log-row .log-col-md-4 .title {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 30px;
+            }
+.form-control{
+    border-radius: 5px;
+}
+.login-index {
+    float:right; outline-color:blue; background-color:blue; border-radius:4px; padding-left:5px;padding-right:5px;padding-top: 5px; padding-bottom: 5px;
+}
+.login-index:hover{
+    background-color:#7979ff;
+}
+.user-log {
+    display:flex;
+    flex-direction:column;
+    float: right;
+    margin-top:5px;
+    margin-right:10px;
+ }
+
+
+/*notification css*/
+.notification {
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    animation: fadeOut 5s linear forwards;
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90%{
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+.success{
+    background-color: green;
+    color:white;
+}
